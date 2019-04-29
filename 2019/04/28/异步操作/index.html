@@ -8,17 +8,17 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>异步操作的四种方法的前三种 | 三个诸葛亮</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="异步操作的四种方法 回调 promise generator async 搭配 await (ES7)在这里先不讲后面单独讲对比，代替generator 搭配 yield   回调地狱的写法 一层嵌套一层，层层嵌套 12345678910111213141516171819202122232425262728$.ajax(&amp;#123;url: xxx,dataType: &apos;json&apos;,succes">
+  <meta name="description" content="异步操作的四种方法 回调 promise generator async 搭配 await (ES7)在这里先不讲后面单独讲对比，代替generator 搭配 yield">
 <meta property="og:type" content="article">
 <meta property="og:title" content="异步操作的四种方法的前三种">
 <meta property="og:url" content="http://yoursite.com/2019/04/28/异步操作/index.html">
 <meta property="og:site_name" content="三个诸葛亮">
-<meta property="og:description" content="异步操作的四种方法 回调 promise generator async 搭配 await (ES7)在这里先不讲后面单独讲对比，代替generator 搭配 yield   回调地狱的写法 一层嵌套一层，层层嵌套 12345678910111213141516171819202122232425262728$.ajax(&amp;#123;url: xxx,dataType: &apos;json&apos;,succes">
+<meta property="og:description" content="异步操作的四种方法 回调 promise generator async 搭配 await (ES7)在这里先不讲后面单独讲对比，代替generator 搭配 yield">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-04-28T05:14:46.006Z">
+<meta property="og:updated_time" content="2019-04-29T03:05:21.152Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="异步操作的四种方法的前三种">
-<meta name="twitter:description" content="异步操作的四种方法 回调 promise generator async 搭配 await (ES7)在这里先不讲后面单独讲对比，代替generator 搭配 yield   回调地狱的写法 一层嵌套一层，层层嵌套 12345678910111213141516171819202122232425262728$.ajax(&amp;#123;url: xxx,dataType: &apos;json&apos;,succes">
+<meta name="twitter:description" content="异步操作的四种方法 回调 promise generator async 搭配 await (ES7)在这里先不讲后面单独讲对比，代替generator 搭配 yield">
   
     <link rel="alternative" href="/atom.xml" title="三个诸葛亮" type="application/atom+xml">
   
@@ -165,6 +165,7 @@
 <li>async 搭配 await (ES7)在这里先不讲后面单独讲对比，代替generator 搭配 yield</li>
 </ol>
 <hr>
+<a id="more"></a>
 <h3 id="回调地狱的写法"><a href="#回调地狱的写法" class="headerlink" title="回调地狱的写法"></a>回调地狱的写法</h3><ol>
 <li>一层嵌套一层，层层嵌套 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">$.ajax(&#123;</span><br><span class="line">url: xxx,</span><br><span class="line">dataType: <span class="string">'json'</span>,</span><br><span class="line">success(data1) &#123;</span><br><span class="line">    $.ajax(&#123;</span><br><span class="line">    url: xxx,</span><br><span class="line">    dataType: <span class="string">'json'</span>,</span><br><span class="line">    success(data2) &#123;</span><br><span class="line">        $.ajax(&#123;</span><br><span class="line">        url: xxx,</span><br><span class="line">        dataType: <span class="string">'json'</span>,</span><br><span class="line">        success(data3) &#123;</span><br><span class="line">           <span class="comment">// 完事了</span></span><br><span class="line">        &#125;,</span><br><span class="line">        error()&#123;</span><br><span class="line">        alert (<span class="string">'错了~~'</span>)</span><br><span class="line">        &#125;</span><br><span class="line">        &#125;) </span><br><span class="line">    &#125;,</span><br><span class="line">    error()&#123;</span><br><span class="line">    alert (<span class="string">'错了~~'</span>)</span><br><span class="line">    &#125;</span><br><span class="line">    &#125;) </span><br><span class="line">&#125;,</span><br><span class="line">error()&#123;</span><br><span class="line">alert (<span class="string">'错了~~'</span>)</span><br><span class="line">&#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 </li>
