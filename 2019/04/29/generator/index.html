@@ -6,15 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2019/4 | 三个诸葛亮</title>
+  <title>generator 和 yield 配合使用 | 三个诸葛亮</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="三个诸葛亮">
-<meta property="og:url" content="http://yoursite.com/archives/2019/04/index.html">
+  <meta name="description" content="generator 中间可以停 generator 不能使用箭头函数来表达 generator 有一个重要的标志，带有星号 *1234//这就是一个 generator 函数function *show()&amp;#123;    &amp;#125;   yield 放弃执行的意思yield 可以传参 next 里面可以进行传参，传的参数就可以传到 yield 里面 接收：let a = yield 第一个">
+<meta property="og:type" content="article">
+<meta property="og:title" content="generator 和 yield 配合使用">
+<meta property="og:url" content="http://yoursite.com/2019/04/29/generator/index.html">
 <meta property="og:site_name" content="三个诸葛亮">
+<meta property="og:description" content="generator 中间可以停 generator 不能使用箭头函数来表达 generator 有一个重要的标志，带有星号 *1234//这就是一个 generator 函数function *show()&amp;#123;    &amp;#125;   yield 放弃执行的意思yield 可以传参 next 里面可以进行传参，传的参数就可以传到 yield 里面 接收：let a = yield 第一个">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-04-29T01:01:27.814Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="三个诸葛亮">
+<meta name="twitter:title" content="generator 和 yield 配合使用">
+<meta name="twitter:description" content="generator 中间可以停 generator 不能使用箭头函数来表达 generator 有一个重要的标志，带有星号 *1234//这就是一个 generator 函数function *show()&amp;#123;    &amp;#125;   yield 放弃执行的意思yield 可以传参 next 里面可以进行传参，传的参数就可以传到 yield 里面 接收：let a = yield 第一个">
   
     <link rel="alternative" href="/atom.xml" title="三个诸葛亮" type="application/atom+xml">
   
@@ -150,103 +154,173 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-generator" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      generator 和 yield 配合使用
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/04/29/generator/" class="archive-article-date">
+
+        
+        <a href="/2019/04/29/generator/" class="archive-article-date">
   	<time datetime="2019-04-29T01:00:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-29</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/04/29/generator/">generator 和 yield 配合使用</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="generator-中间可以停"><a href="#generator-中间可以停" class="headerlink" title="generator 中间可以停"></a>generator 中间可以停</h2><ol>
+<li>generator 不能使用箭头函数来表达</li>
+<li>generator 有一个重要的标志，带有星号 *<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">//这就是一个 generator 函数</span><br><span class="line">function *show()&#123;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="yield-放弃执行的意思"><a href="#yield-放弃执行的意思" class="headerlink" title="yield 放弃执行的意思"></a>yield 放弃执行的意思</h2><h4 id="yield-可以传参"><a href="#yield-可以传参" class="headerlink" title="yield 可以传参"></a>yield 可以传参</h4><ol>
+<li>next 里面可以进行传参，传的参数就可以传到 yield 里面</li>
+<li>接收：let a = yield</li>
+<li>第一个 next 传参数，就是废的</li>
+<li>为什么 a 打印出5 来？因为第二个next 是执行<code>let a = yield</code> 一下的代码</li>
+<li><p>如果想在<code>let a = yield</code> 之前传参数，那么按着正常的设置形参，传实参就好了</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">function *show() &#123;</span><br><span class="line">    alert(&apos;a&apos;);</span><br><span class="line">    </span><br><span class="line">    let a = yield</span><br><span class="line">    //yield; //使用 yield 进行暂停执行</span><br><span class="line">    </span><br><span class="line">    alert(&apos;b&apos;);</span><br><span class="line">    alert(a);// 打印出 5</span><br><span class="line">&#125;</span><br><span class="line">let gen = show();// 生成器对象</span><br><span class="line"></span><br><span class="line">gen.next(12);// 执行第一步 alert(&apos;a&apos;)</span><br><span class="line">gen.next(5);// 执行第二步</span><br></pre></td></tr></table></figure>
+<h3 id="yield-也可以返回"><a href="#yield-也可以返回" class="headerlink" title="yield 也可以返回"></a>yield 也可以返回</h3></li>
+<li>yield 后面可以带东西，甭管是什么东西 ，你带什么就在 第一个next 就会返回什么结果</li>
+<li>如果后面的next 函数中没有return ，那么输出的结果就是 undefined ，有return 那么就 输出什么 </li>
+<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">function *show() &#123;</span><br><span class="line">       alert(&apos;a&apos;);</span><br><span class="line"></span><br><span class="line">       yield 12;</span><br><span class="line"></span><br><span class="line">       alert(&apos;b&apos;);</span><br><span class="line">       return 66;</span><br><span class="line"></span><br><span class="line">   &#125;</span><br><span class="line">   let gen = show();// 调用函数</span><br><span class="line"></span><br><span class="line">   let res1 = gen.next();</span><br><span class="line">   console.log(res1); //&#123;value: 12, done: false&#125;</span><br><span class="line"></span><br><span class="line">   let res2 = gen.next();</span><br><span class="line">   // 如果没有return 那么 这里的value 值就是undefined</span><br><span class="line">   console.log(res2);//&#123;value: 66, done: true&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/04/29/generator/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/04/28/扩展运算符（...）/" class="archive-article-date">
-  	<time datetime="2019-04-28T14:07:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-28</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2019/04/28/扩展运算符（...）/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">扩展运算符</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/04/28/扩展运算符（...）/">扩展运算符</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/04/28/异步操作/" class="archive-article-date">
-  	<time datetime="2019-04-28T05:07:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-28</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/04/28/异步操作/">异步操作的四种方法的前三种</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
 
 
           </div>
@@ -269,8 +343,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
