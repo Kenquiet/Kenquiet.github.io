@@ -6,15 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2019 | 三个诸葛亮</title>
+  <title>jq入口函数和对象与DOM对象的区别 | 三个诸葛亮</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="三个诸葛亮">
-<meta property="og:url" content="http://yoursite.com/archives/2019/index.html">
+  <meta name="description" content="与js 入口函数比较 js的入口函数执行要比jQuery 的入口函数执行得晚一些 jq 的入口函数会等待页面加载完成才执行，但是不会等图片加载完成 js 的入口函数会等待页面加载完成，而且还会等待图片的加载完成才开始执行  jq的入口函数 jq 有两种入口函数的写法123456$(document).ready(function () &amp;#123;       console.log(&quot;这是jQu">
+<meta property="og:type" content="article">
+<meta property="og:title" content="jq入口函数和对象与DOM对象的区别">
+<meta property="og:url" content="http://yoursite.com/2019/05/01/jq入口函数和对象及与DOM 对象的区别/index.html">
 <meta property="og:site_name" content="三个诸葛亮">
+<meta property="og:description" content="与js 入口函数比较 js的入口函数执行要比jQuery 的入口函数执行得晚一些 jq 的入口函数会等待页面加载完成才执行，但是不会等图片加载完成 js 的入口函数会等待页面加载完成，而且还会等待图片的加载完成才开始执行  jq的入口函数 jq 有两种入口函数的写法123456$(document).ready(function () &amp;#123;       console.log(&quot;这是jQu">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-05-01T08:27:25.945Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="三个诸葛亮">
+<meta name="twitter:title" content="jq入口函数和对象与DOM对象的区别">
+<meta name="twitter:description" content="与js 入口函数比较 js的入口函数执行要比jQuery 的入口函数执行得晚一些 jq 的入口函数会等待页面加载完成才执行，但是不会等图片加载完成 js 的入口函数会等待页面加载完成，而且还会等待图片的加载完成才开始执行  jq的入口函数 jq 有两种入口函数的写法123456$(document).ready(function () &amp;#123;       console.log(&quot;这是jQu">
   
     <link rel="alternative" href="/atom.xml" title="三个诸葛亮" type="application/atom+xml">
   
@@ -134,157 +138,190 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-jq入口函数和对象及与DOM 对象的区别" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      jq入口函数和对象与DOM对象的区别
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/05/01/jq入口函数和对象及与DOM 对象的区别/" class="archive-article-date">
+
+        
+        <a href="/2019/05/01/jq入口函数和对象及与DOM 对象的区别/" class="archive-article-date">
   	<time datetime="2019-05-01T08:10:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-01</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/05/01/jq入口函数和对象及与DOM 对象的区别/">jq入口函数和对象与DOM对象的区别</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="与js-入口函数比较"><a href="#与js-入口函数比较" class="headerlink" title="与js 入口函数比较"></a>与js 入口函数比较</h2><ol>
+<li>js的入口函数执行要比jQuery 的入口函数执行得晚一些</li>
+<li>jq 的入口函数会等待页面加载完成才执行，但是不会等图片加载完成</li>
+<li>js 的入口函数会等待页面加载完成，而且还会等待图片的加载完成才开始执行</li>
+</ol>
+<h2 id="jq的入口函数"><a href="#jq的入口函数" class="headerlink" title="jq的入口函数"></a>jq的入口函数</h2><ol>
+<li>jq 有两种入口函数的写法<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="built_in">document</span>).ready(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">       <span class="built_in">console</span>.log(<span class="string">"这是jQuery入口函数的第一种写法"</span>)</span><br><span class="line">    &#125;);</span><br><span class="line">    $(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">"这是jQuery入口函数的第二种写法"</span>)</span><br><span class="line">    &#125;)</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<hr>
+<h2 id="jq-对象与-DOM-对象的区别"><a href="#jq-对象与-DOM-对象的区别" class="headerlink" title="jq 对象与 DOM 对象的区别"></a>jq 对象与 DOM 对象的区别</h2><ol>
+<li>首先 jq 对象是一个伪数组，不能调用数组的方法，有自己的方法</li>
+<li>js 对象不能调用 jq 对象的方法，因为jq对象是一个伪数组集合，有自己的方法</li>
+<li>jq 对象也不能调用 js 对象的方法，</li>
+</ol>
+<h4 id="jq-对象与-DOM-对象的相互转换"><a href="#jq-对象与-DOM-对象的相互转换" class="headerlink" title="jq 对象与 DOM 对象的相互转换"></a>jq 对象与 DOM 对象的相互转换</h4><ol>
+<li><p>如果 DOM 对象想使用jq 方法，那么就将DOM对象转换成jq对象</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> cloth = <span class="built_in">document</span>.getElementById(<span class="string">"cloth"</span>);</span><br><span class="line"><span class="comment">// 将js对象转换成 jq 对象</span></span><br><span class="line">$(cloth).text(<span class="string">"呵呵"</span>)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>jq 对象想使用 DOM 对象的方法</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> $li = $(<span class="string">"li"</span>);</span><br><span class="line"><span class="comment">// 将jq对象中的第一个 DOM 对象取出来，就可以使用DOM对象的方法了</span></span><br><span class="line">$li[<span class="number">0</span>].style.backgroundColor = <span class="string">"red"</span>;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>补充说明： <code>let $li = $(&quot;li&quot;);</code> 左边的 li 前面加上 $ 只是为了好区分，让读我代码的人一眼就能看出来，这个是jq 对象</p>
+</li>
+</ol>
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>阿里嘎多~~<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/bao.png">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/win.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/05/01/jq入口函数和对象及与DOM 对象的区别/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/04/29/项目开发流程 基础知识和讲解/" class="archive-article-date">
-  	<time datetime="2019-04-29T12:50:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-29</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2019/04/29/项目开发流程 基础知识和讲解/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">项目开发流程 基础知识和讲解</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/04/29/项目开发流程 基础知识和讲解/">项目开发流程 基础知识和讲解</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/04/29/generator/" class="archive-article-date">
-  	<time datetime="2019-04-29T01:00:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-29</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/04/29/generator/">generator 和 yield 配合使用</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/04/28/扩展运算符（...）/" class="archive-article-date">
-  	<time datetime="2019-04-28T14:07:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-28</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/04/28/扩展运算符（...）/">扩展运算符</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/04/28/异步操作/" class="archive-article-date">
-  	<time datetime="2019-04-28T05:07:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-28</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/04/28/异步操作/">异步操作的四种方法的前三种</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -307,8 +344,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
