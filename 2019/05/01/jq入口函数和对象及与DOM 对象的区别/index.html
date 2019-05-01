@@ -8,17 +8,17 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>jq入口函数和对象与DOM对象的区别 | 三个诸葛亮</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="与js 入口函数比较 js的入口函数执行要比jQuery 的入口函数执行得晚一些 jq 的入口函数会等待页面加载完成才执行，但是不会等图片加载完成 js 的入口函数会等待页面加载完成，而且还会等待图片的加载完成才开始执行  jq的入口函数 jq 有两种入口函数的写法123456$(document).ready(function () &amp;#123;       console.log(&quot;这是jQu">
+  <meta name="description" content="与js 入口函数比较 js的入口函数执行要比jQuery 的入口函数执行得晚一些 jq 的入口函数会等待页面加载完成才执行，但是不会等图片加载完成 js 的入口函数会等待页面加载完成，而且还会等待图片的加载完成才开始执行">
 <meta property="og:type" content="article">
 <meta property="og:title" content="jq入口函数和对象与DOM对象的区别">
 <meta property="og:url" content="http://yoursite.com/2019/05/01/jq入口函数和对象及与DOM 对象的区别/index.html">
 <meta property="og:site_name" content="三个诸葛亮">
-<meta property="og:description" content="与js 入口函数比较 js的入口函数执行要比jQuery 的入口函数执行得晚一些 jq 的入口函数会等待页面加载完成才执行，但是不会等图片加载完成 js 的入口函数会等待页面加载完成，而且还会等待图片的加载完成才开始执行  jq的入口函数 jq 有两种入口函数的写法123456$(document).ready(function () &amp;#123;       console.log(&quot;这是jQu">
+<meta property="og:description" content="与js 入口函数比较 js的入口函数执行要比jQuery 的入口函数执行得晚一些 jq 的入口函数会等待页面加载完成才执行，但是不会等图片加载完成 js 的入口函数会等待页面加载完成，而且还会等待图片的加载完成才开始执行">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-05-01T08:27:25.945Z">
+<meta property="og:updated_time" content="2019-05-01T08:29:29.998Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="jq入口函数和对象与DOM对象的区别">
-<meta name="twitter:description" content="与js 入口函数比较 js的入口函数执行要比jQuery 的入口函数执行得晚一些 jq 的入口函数会等待页面加载完成才执行，但是不会等图片加载完成 js 的入口函数会等待页面加载完成，而且还会等待图片的加载完成才开始执行  jq的入口函数 jq 有两种入口函数的写法123456$(document).ready(function () &amp;#123;       console.log(&quot;这是jQu">
+<meta name="twitter:description" content="与js 入口函数比较 js的入口函数执行要比jQuery 的入口函数执行得晚一些 jq 的入口函数会等待页面加载完成才执行，但是不会等图片加载完成 js 的入口函数会等待页面加载完成，而且还会等待图片的加载完成才开始执行">
   
     <link rel="alternative" href="/atom.xml" title="三个诸葛亮" type="application/atom+xml">
   
@@ -163,6 +163,7 @@
 <li>jq 的入口函数会等待页面加载完成才执行，但是不会等图片加载完成</li>
 <li>js 的入口函数会等待页面加载完成，而且还会等待图片的加载完成才开始执行</li>
 </ol>
+<a id="more"></a>
 <h2 id="jq的入口函数"><a href="#jq的入口函数" class="headerlink" title="jq的入口函数"></a>jq的入口函数</h2><ol>
 <li>jq 有两种入口函数的写法<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="built_in">document</span>).ready(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">       <span class="built_in">console</span>.log(<span class="string">"这是jQuery入口函数的第一种写法"</span>)</span><br><span class="line">    &#125;);</span><br><span class="line">    $(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">"这是jQuery入口函数的第二种写法"</span>)</span><br><span class="line">    &#125;)</span><br></pre></td></tr></table></figure>
 </li>
