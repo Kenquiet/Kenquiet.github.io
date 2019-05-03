@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>jq入口函数和对象与DOM对象的区别 | 三个诸葛亮</title>
+  <title>jQuery 基础 | 三个诸葛亮</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="与js 入口函数比较 js的入口函数执行要比jQuery 的入口函数执行得晚一些 jq 的入口函数会等待页面加载完成才执行，但是不会等图片加载完成 js 的入口函数会等待页面加载完成，而且还会等待图片的加载完成才开始执行">
+  <meta name="description" content="jQuery 选择器1. jQuery 选择器支持 CSS到CSS3 所有的选择器，而且还添加了更加强大的选择器，所以按照这句话理解就行了。举个栗子：12// 这个就是 直接后代选择器，对就是这样用$(&apos;.div&amp;gt;li&apos;)">
 <meta property="og:type" content="article">
-<meta property="og:title" content="jq入口函数和对象与DOM对象的区别">
-<meta property="og:url" content="http://yoursite.com/2019/05/01/jq入口函数和对象及与DOM 对象的区别/index.html">
+<meta property="og:title" content="jQuery 基础">
+<meta property="og:url" content="http://yoursite.com/2019/05/03/jQuery基础/index.html">
 <meta property="og:site_name" content="三个诸葛亮">
-<meta property="og:description" content="与js 入口函数比较 js的入口函数执行要比jQuery 的入口函数执行得晚一些 jq 的入口函数会等待页面加载完成才执行，但是不会等图片加载完成 js 的入口函数会等待页面加载完成，而且还会等待图片的加载完成才开始执行">
+<meta property="og:description" content="jQuery 选择器1. jQuery 选择器支持 CSS到CSS3 所有的选择器，而且还添加了更加强大的选择器，所以按照这句话理解就行了。举个栗子：12// 这个就是 直接后代选择器，对就是这样用$(&apos;.div&amp;gt;li&apos;)">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-05-01T08:29:29.998Z">
+<meta property="og:updated_time" content="2019-05-03T01:46:07.036Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="jq入口函数和对象与DOM对象的区别">
-<meta name="twitter:description" content="与js 入口函数比较 js的入口函数执行要比jQuery 的入口函数执行得晚一些 jq 的入口函数会等待页面加载完成才执行，但是不会等图片加载完成 js 的入口函数会等待页面加载完成，而且还会等待图片的加载完成才开始执行">
+<meta name="twitter:title" content="jQuery 基础">
+<meta name="twitter:description" content="jQuery 选择器1. jQuery 选择器支持 CSS到CSS3 所有的选择器，而且还添加了更加强大的选择器，所以按照这句话理解就行了。举个栗子：12// 这个就是 直接后代选择器，对就是这样用$(&apos;.div&amp;gt;li&apos;)">
   
     <link rel="alternative" href="/atom.xml" title="三个诸葛亮" type="application/atom+xml">
   
@@ -138,51 +138,43 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-jq入口函数和对象及与DOM 对象的区别" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-jQuery基础" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      jq入口函数和对象与DOM对象的区别
+      jQuery 基础
     </h1>
   
 
         
-        <a href="/2019/05/01/jq入口函数和对象及与DOM 对象的区别/" class="archive-article-date">
-  	<time datetime="2019-05-01T08:10:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-01</time>
+        <a href="/2019/05/03/jQuery基础/" class="archive-article-date">
+  	<time datetime="2019-05-03T01:10:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-03</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="与js-入口函数比较"><a href="#与js-入口函数比较" class="headerlink" title="与js 入口函数比较"></a>与js 入口函数比较</h2><ol>
-<li>js的入口函数执行要比jQuery 的入口函数执行得晚一些</li>
-<li>jq 的入口函数会等待页面加载完成才执行，但是不会等图片加载完成</li>
-<li>js 的入口函数会等待页面加载完成，而且还会等待图片的加载完成才开始执行</li>
-</ol>
+        <h2 id="jQuery-选择器"><a href="#jQuery-选择器" class="headerlink" title="jQuery 选择器"></a>jQuery 选择器</h2><h3 id="1-jQuery-选择器支持-CSS到CSS3-所有的选择器，而且还添加了更加强大的选择器，所以按照这句话理解就行了。"><a href="#1-jQuery-选择器支持-CSS到CSS3-所有的选择器，而且还添加了更加强大的选择器，所以按照这句话理解就行了。" class="headerlink" title="1. jQuery 选择器支持 CSS到CSS3 所有的选择器，而且还添加了更加强大的选择器，所以按照这句话理解就行了。"></a>1. jQuery 选择器支持 CSS到CSS3 所有的选择器，而且还添加了更加强大的选择器，所以按照这句话理解就行了。</h3><p>举个栗子：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 这个就是 直接后代选择器，对就是这样用</span></span><br><span class="line">$(<span class="string">'.div&gt;li'</span>)</span><br></pre></td></tr></table></figure></p>
 <a id="more"></a>
-<h2 id="jq的入口函数"><a href="#jq的入口函数" class="headerlink" title="jq的入口函数"></a>jq的入口函数</h2><ol>
-<li>jq 有两种入口函数的写法<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="built_in">document</span>).ready(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">       <span class="built_in">console</span>.log(<span class="string">"这是jQuery入口函数的第一种写法"</span>)</span><br><span class="line">    &#125;);</span><br><span class="line">    $(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">"这是jQuery入口函数的第二种写法"</span>)</span><br><span class="line">    &#125;)</span><br></pre></td></tr></table></figure>
+<h3 id="2-jquery-操作CSS样式"><a href="#2-jquery-操作CSS样式" class="headerlink" title="2. jquery 操作CSS样式"></a>2. jquery 操作CSS样式</h3><ol>
+<li>jquery 如何设置样式：css(name,value),name:样式名，value：样式值<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">".div"</span>).css(<span class="string">"backgroundColor"</span>,<span class="string">"red"</span>)</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h3 id="3-Mouseover-鼠标移至-与-Mouseenter-的区别"><a href="#3-Mouseover-鼠标移至-与-Mouseenter-的区别" class="headerlink" title="3. Mouseover (鼠标移至) 与 Mouseenter 的区别"></a>3. Mouseover (鼠标移至) 与 Mouseenter 的区别</h3><ol>
+<li>Mouseover事件：不论鼠标指针被选元素或其子元素，都会被被触发事件</li>
+<li>Mouseenter事件：只有在鼠标指针穿过被选元素时，才会触发</li>
+<li>所以以后我们在注册鼠标经过事件时使用mouseenter(鼠标移进)和mouseleave(鼠标移出) <h2 id="jq的链式调用"><a href="#jq的链式调用" class="headerlink" title="jq的链式调用"></a>jq的链式调用</h2></li>
+<li>jq 可以进行链式调用，因为jq每次返回的结果都是一个jq对象</li>
+<li>当然也有不能链式调用的时候，这种情况暂时不了解<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="keyword">this</span>).next().slideDown(<span class="number">300</span>).parent().siblings(<span class="string">'li'</span>).children(<span class="string">'div'</span>).slideUp(<span class="number">300</span>)</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
 <hr>
-<h2 id="jq-对象与-DOM-对象的区别"><a href="#jq-对象与-DOM-对象的区别" class="headerlink" title="jq 对象与 DOM 对象的区别"></a>jq 对象与 DOM 对象的区别</h2><ol>
-<li>首先 jq 对象是一个伪数组，不能调用数组的方法，有自己的方法</li>
-<li>js 对象不能调用 jq 对象的方法，因为jq对象是一个伪数组集合，有自己的方法</li>
-<li>jq 对象也不能调用 js 对象的方法，</li>
-</ol>
-<h4 id="jq-对象与-DOM-对象的相互转换"><a href="#jq-对象与-DOM-对象的相互转换" class="headerlink" title="jq 对象与 DOM 对象的相互转换"></a>jq 对象与 DOM 对象的相互转换</h4><ol>
-<li><p>如果 DOM 对象想使用jq 方法，那么就将DOM对象转换成jq对象</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> cloth = <span class="built_in">document</span>.getElementById(<span class="string">"cloth"</span>);</span><br><span class="line"><span class="comment">// 将js对象转换成 jq 对象</span></span><br><span class="line">$(cloth).text(<span class="string">"呵呵"</span>)</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>jq 对象想使用 DOM 对象的方法</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> $li = $(<span class="string">"li"</span>);</span><br><span class="line"><span class="comment">// 将jq对象中的第一个 DOM 对象取出来，就可以使用DOM对象的方法了</span></span><br><span class="line">$li[<span class="number">0</span>].style.backgroundColor = <span class="string">"red"</span>;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>补充说明： <code>let $li = $(&quot;li&quot;);</code> 左边的 li 前面加上 $ 只是为了好区分，让读我代码的人一眼就能看出来，这个是jq 对象</p>
-</li>
+<h2 id="index"><a href="#index" class="headerlink" title="index()"></a>index()</h2><ol>
+<li>index() 在jq中是个方法，找索引的，作用是找到当前元素在伪数组找中的下标</li>
 </ol>
 
       
@@ -273,7 +265,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/05/01/jq入口函数和对象及与DOM 对象的区别/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/05/03/jQuery基础/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -287,18 +279,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/05/03/jQuery基础/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          jQuery 基础
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/04/29/项目开发流程 基础知识和讲解/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">项目开发流程 基础知识和讲解</div>
+    <a href="/2019/05/01/jq入口函数和对象及与DOM 对象的区别/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">jq入口函数和对象与DOM对象的区别</div>
       <i class="icon-circle-right"></i>
     </a>
   
